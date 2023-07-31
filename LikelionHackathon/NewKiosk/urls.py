@@ -1,3 +1,5 @@
+'''
+<<<<<<< HEAD
 from django.contrib import admin
 from django.urls import path, include
 
@@ -15,3 +17,16 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(routers.urls)),
 ]
+'''
+from django.urls import path,include
+from django.contrib import admin
+from NewKiosk import views
+
+urlpatterns = [
+    path('api/category/', views.CategoryListAPI.as_view()),
+    path('api/product/', views.ProductListAPI.as_view()),
+    path('api/order/', views.OrderListAPI.as_view()),
+    path('api/product_order/', views.Product_OrderListAPI.as_view()),
+]
+
+# >>>>>>> d0e8621caf4320d5893cc650758fa79c26a5d49a
